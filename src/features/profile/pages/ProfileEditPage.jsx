@@ -1,6 +1,8 @@
 import React from 'react';
-import { Edit3, Save, X } from 'lucide-react';
+import { Edit3, Save, X, ArrowLeft } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/shared/components/Button';
+import GlobalLoader from '@/shared/components/GlobalLoader';
 
 import { ProfileHeader } from '../components/ProfileHeader';
 import { ProfileSidebar } from '../components/ProfileSidebar';
@@ -26,6 +28,7 @@ const SECTION_COMPONENTS = {
  * sidebar, and whichever section tab is active.
  */
 export default function ProfileEditPage() {
+  const navigate = useNavigate();
   const { activeTab, isEditing, isSaving, toggleEdit, saveChanges, switchTab } =
     useProfileEdit();
 
@@ -51,7 +54,20 @@ export default function ProfileEditPage() {
   };
 
   return (
-    <div className="mx-auto max-w-6xl space-y-6 p-4 sm:p-6">
+    <div className="mx-auto max-w-6xl space-y-6 p-4 sm:p-6 relative">
+      {isSaving && <GlobalLoader />}
+
+      {/* Back to Dashboard Navigation */}
+      <div>
+        <button 
+          onClick={() => navigate('/dashboard')}
+          className="inline-flex items-center gap-2 text-sm text-brand-white-muted hover:text-brand-orange transition-colors font-medium"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Dashboard
+        </button>
+      </div>
+
       {/* ── Banner ── */}
       <ProfileHeader onUpgrade={() => console.log('upgrade')} />
 

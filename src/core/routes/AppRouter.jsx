@@ -6,6 +6,8 @@ import HomePage from '@/features/home/pages/HomePage';
 import DashboardHomePage from '@/features/dashboard/pages/DashboardHomePage';
 import { SignupPage } from '@/features/auth/pages/SignupPage';
 import ProfileEditPage from '@/features/profile/pages/ProfileEditPage';
+import { ProtectedRoute } from './ProtectedRoute';
+import { GuestRoute } from './GuestRoute';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <DashboardLayout />,
+    element: (
+      <ProtectedRoute>
+        <DashboardLayout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         index: true,
@@ -34,7 +40,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/signup',
-    element: <SignupPage />,
+    element: (
+      <GuestRoute>
+        <SignupPage />
+      </GuestRoute>
+    ),
   }
 ]);
 
