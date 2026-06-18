@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function DashboardHomePage() {
   return (
-    <div className="h-full w-full flex items-center justify-center p-8">
+    <div className="h-full w-full flex flex-col items-center justify-center p-8">
       <div className="text-center space-y-4 max-w-md">
         <h2 className="text-2xl font-bold text-brand-white">Welcome to your Dashboard</h2>
         <p className="text-brand-white-muted">
