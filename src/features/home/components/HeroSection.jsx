@@ -33,12 +33,12 @@ export const HeroSection = () => {
         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-brand-orange-light/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000" />
       </div>
 
-      {/* Slowly Spinning Khanda Watermark */}
+      {/* Fixed Khanda Watermark */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 0.03, scale: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
-        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center animate-spin-slow"
+        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
       >
         <KhandaIcon className="h-[700px] w-[700px] text-white" />
       </motion.div>
