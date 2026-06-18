@@ -1,0 +1,99 @@
+.container {
+  @apply w-full max-w-4xl flex flex-col items-center;
+}
+
+.header {
+  @apply w-full text-center mb-10;
+}
+
+.title {
+  @apply text-4xl font-bold text-white mb-3 font-display;
+}
+
+.subtitle {
+  @apply text-brand-white-muted text-base max-w-2xl mx-auto;
+}
+
+.cardsGrid {
+  @apply w-full grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6;
+}
+
+.card {
+  @apply bg-brand-black-card rounded-2xl border border-white/5 p-8 shadow-xl;
+}
+
+.cardHeader {
+  @apply flex items-center gap-3 mb-6;
+}
+
+.cardIcon {
+  @apply w-5 h-5 text-brand-orange;
+}
+
+.cardTitle {
+  @apply text-lg font-bold text-brand-orange;
+}
+
+.cardContent {
+  @apply space-y-5;
+}
+
+.twoCol {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.hobbiesCard {
+  @apply w-full bg-brand-black-card rounded-2xl border border-white/5 p-8 shadow-xl mb-10;
+}
+
+.hobbiesHeader {
+  @apply flex items-center justify-between mb-6;
+}
+
+.hobbiesHeaderLeft {
+  @apply flex items-center gap-3;
+}
+
+.hobbiesCount {
+  @apply bg-white/5 border border-white/10 rounded-full px-4 py-1 text-xs font-bold text-brand-white-muted;
+}
+
+.hobbiesSubtext {
+  @apply text-sm font-medium text-brand-white-muted mb-4;
+}
+
+.pillsContainer {
+  @apply flex flex-wrap gap-3;
+}
+
+.pillBase {
+  @apply flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold border transition-all duration-300;
+}
+
+.pillSelected {
+  @apply bg-brand-orange border-brand-orange text-white shadow-[0_0_15px_rgba(255,102,0,0.3)];
+}
+
+.pillUnselected {
+  @apply bg-transparent border-white/10 text-brand-white-muted hover:border-brand-orange/50 hover:text-white;
+}
+
+.footer {
+  @apply w-full flex items-center justify-between;
+}
+
+.backBtn {
+  @apply w-24 h-12 border border-white/10 rounded-lg text-white hover:border-white/30 text-sm font-medium transition-colors;
+}
+
+.actionGroup {
+  @apply flex gap-4 items-center;
+}
+
+.skipBtn {
+  @apply w-auto h-11 px-6 border border-white/10 rounded-lg text-white hover:border-white/30 text-sm font-medium transition-colors;
+}
+
+.submitBtn {
+  @apply w-auto px-8 h-12 shadow-orange-glow;
+}

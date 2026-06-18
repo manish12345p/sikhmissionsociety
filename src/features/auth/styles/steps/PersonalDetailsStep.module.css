@@ -1,0 +1,71 @@
+.container {
+  @apply w-full max-w-2xl bg-brand-black-card rounded-2xl border border-white/5 p-8 md:p-10 shadow-2xl;
+}
+
+.header {
+  @apply mb-8;
+}
+
+.title {
+  @apply text-3xl font-bold text-white mb-2 font-display;
+}
+
+.subtitle {
+  @apply text-brand-white-muted text-sm;
+}
+
+.formGrid {
+  @apply space-y-6;
+}
+
+.twoCol {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.paperclipIcon {
+  @apply w-[50px] h-[50px] mt-0 border border-white/10 rounded-xl flex items-center justify-center bg-brand-black-card hover:border-brand-orange cursor-pointer transition-colors shrink-0;
+}
+
+.inputGroup {
+  @apply space-y-2 pt-2;
+}
+
+.label {
+  @apply block text-xs font-bold text-brand-white-muted uppercase tracking-wider;
+}
+
+.imageUploadBox {
+  @apply w-full border-2 border-dashed border-white/10 rounded-xl p-8 flex flex-col items-center justify-center hover:border-brand-orange/50 hover:bg-brand-orange/5 transition-colors cursor-pointer;
+}
+
+.uploadIcon {
+  @apply w-8 h-8 text-brand-white-muted group-hover:text-brand-orange mb-3 transition-colors;
+}
+
+.uploadText {
+  @apply text-sm font-medium text-brand-white-muted group-hover:text-white transition-colors;
+}
+
+.textarea {
+  @apply w-full bg-brand-black border border-white/10 rounded-xl p-4 text-white placeholder-white/30 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all resize-none h-28;
+}
+
+.footer {
+  @apply flex items-center justify-between mt-10 pt-6 border-t border-white/5;
+}
+
+.backBtn {
+  @apply w-24 h-11 border border-white/10 rounded-lg text-white hover:border-white/30 text-sm font-medium transition-colors;
+}
+
+.actionGroup {
+  @apply flex gap-4 items-center;
+}
+
+.skipBtn {
+  @apply w-auto h-11 px-6 border border-white/10 rounded-lg text-white hover:border-white/30 text-sm font-medium transition-colors;
+}
+
+.submitBtn {
+  @apply w-auto px-6 min-w-[150px];
+}

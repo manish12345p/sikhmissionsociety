@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-orange: #FF6600;
+    --brand-black: #0A0A0A;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-brand-black text-brand-white font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-brand-white;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-brand-black;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-orange rounded-full;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-orange {
+    background: rgba(255, 102, 0, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 102, 0, 0.2);
+  }
+
+  .text-gradient-orange {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(135deg, #FF6600, #FF8533);
+  }
+
+  .orange-glow {
+    box-shadow: 0 0 30px rgba(255, 102, 0, 0.3);
+  }
+
+  .divider-orange {
+    height: 3px;
+    background: linear-gradient(90deg, #FF6600, transparent);
+    border-radius: 999px;
+  }
+
+  /* Section badge */
+  .section-badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase;
+    background: rgba(255, 102, 0, 0.12);
+    border: 1px solid rgba(255, 102, 0, 0.3);
+    color: #FF6600;
+  }
+
+  /* Card dark style */
+  .card-dark {
+    @apply bg-brand-black-card rounded-2xl border border-brand-black-border;
+  }
+
+  /* Input dark style */
+  .input-dark {
+    @apply w-full h-12 rounded-xl border border-brand-black-border bg-brand-black-soft text-brand-white placeholder:text-brand-white-muted px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-orange focus:border-transparent transition-all;
+  }
+}

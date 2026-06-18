@@ -1,0 +1,79 @@
+.container {
+  @apply w-full max-w-2xl bg-brand-black-card rounded-2xl border border-white/5 shadow-2xl overflow-hidden;
+}
+
+.header {
+  @apply p-8 md:p-10 pb-6 border-b border-white/5;
+}
+
+.stepTag {
+  @apply text-brand-orange text-xs font-bold tracking-widest uppercase mb-2;
+}
+
+.title {
+  @apply text-3xl font-bold text-white font-display;
+}
+
+.content {
+  @apply p-8 md:p-10 space-y-10;
+}
+
+.section {
+  @apply space-y-6;
+}
+
+.sectionHeader {
+  @apply flex items-center gap-3 mb-6;
+}
+
+.sectionIcon {
+  @apply w-5 h-5 text-brand-orange;
+}
+
+.sectionTitle {
+  @apply text-sm font-bold text-brand-orange tracking-widest uppercase;
+}
+
+.twoCol {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.divider {
+  @apply h-px w-full bg-white/5;
+}
+
+.inputGroup {
+  @apply space-y-2 pt-2;
+}
+
+.label {
+  @apply block text-xs font-bold text-brand-white-muted uppercase tracking-wider;
+}
+
+.textarea {
+  @apply w-full bg-brand-black border border-white/10 rounded-xl p-4 text-white placeholder-white/30 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all resize-none h-24;
+}
+
+.footer {
+  @apply flex items-center justify-between p-8 md:p-10 border-t border-white/5 bg-brand-black/50;
+}
+
+.backBtn {
+  @apply flex items-center gap-2 text-brand-white-muted hover:text-white text-sm font-medium transition-colors;
+}
+
+.backIcon {
+  @apply w-4 h-4;
+}
+
+.actionGroup {
+  @apply flex gap-4 items-center;
+}
+
+.skipBtn {
+  @apply w-auto h-11 px-6 border border-white/10 rounded-lg text-white hover:border-white/30 text-sm font-medium transition-colors;
+}
+
+.submitBtn {
+  @apply w-auto px-8;
+}

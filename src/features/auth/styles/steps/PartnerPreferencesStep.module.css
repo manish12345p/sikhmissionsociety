@@ -1,0 +1,191 @@
+.container {
+  @apply w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8;
+}
+
+.leftColumn {
+  @apply flex flex-col;
+}
+
+.header {
+  @apply mb-6;
+}
+
+.title {
+  @apply text-5xl font-black font-display text-white mb-3;
+}
+
+.titleHighlight {
+  @apply text-brand-orange;
+}
+
+.subtitle {
+  @apply text-brand-white-muted text-base max-w-xl;
+}
+
+.progressContainer {
+  @apply w-full mb-6;
+}
+
+.progressHeader {
+  @apply flex items-center justify-between mb-2;
+}
+
+.progressLabel {
+  @apply text-xs font-bold tracking-widest text-brand-orange uppercase;
+}
+
+.progressValue {
+  @apply text-sm font-bold text-white;
+}
+
+.progressBarBg {
+  @apply w-full h-1.5 bg-white/5 rounded-full overflow-hidden flex;
+}
+
+.progressBarFill {
+  @apply h-full bg-brand-orange w-[85%];
+}
+
+.warningBox {
+  @apply w-full border border-brand-orange/30 bg-brand-orange/5 rounded-xl p-4 flex gap-3 mb-8;
+}
+
+.warningIcon {
+  @apply w-5 h-5 text-brand-orange shrink-0 mt-0.5;
+}
+
+.warningText {
+  @apply text-sm text-brand-white-muted leading-relaxed;
+}
+
+.warningHighlight {
+  @apply text-brand-orange font-medium;
+}
+
+.formCard {
+  @apply bg-brand-black-card rounded-2xl border border-white/5 p-8 shadow-xl;
+}
+
+.gridRow {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 mb-6;
+}
+
+.inputGroup {
+  @apply space-y-2;
+}
+
+.label {
+  @apply block text-xs font-bold text-brand-white-muted uppercase tracking-wider;
+}
+
+.flexRow {
+  @apply flex gap-2;
+}
+
+.selectFull {
+  @apply w-full;
+}
+
+.formFooter {
+  @apply flex items-center justify-between pt-6 border-t border-white/5 mt-4;
+}
+
+.noticeBox {
+  @apply flex items-center gap-2 max-w-[200px];
+}
+
+.noticeIcon {
+  @apply w-5 h-5 text-brand-white-muted shrink-0;
+}
+
+.noticeText {
+  @apply text-xs text-brand-white-muted leading-tight;
+}
+
+.actionGroup {
+  @apply flex gap-4 items-center;
+}
+
+.skipBtn {
+  @apply w-auto h-11 px-6 border border-white/10 rounded-lg text-white hover:border-white/30 text-sm font-medium transition-colors;
+}
+
+.submitBtn {
+  @apply h-14 px-8 text-lg font-bold shadow-orange-glow w-48;
+}
+
+.rightColumn {
+  @apply bg-brand-black-soft/50 rounded-3xl border border-white/5 p-8 flex flex-col h-full mt-4 lg:mt-0 lg:sticky lg:top-24;
+}
+
+.previewHeader {
+  @apply flex items-center justify-between mb-8;
+}
+
+.previewTitle {
+  @apply text-xl font-display text-white;
+}
+
+.previewBadge {
+  @apply px-3 py-1 rounded-full bg-[#cc5200]/20 border border-[#cc5200]/30 text-[#ffaa00] text-xs font-bold tracking-wider;
+}
+
+.matchList {
+  @apply space-y-4 flex-1;
+}
+
+.matchCard {
+  @apply w-full bg-[#151515] rounded-xl border border-white/5 p-4 flex items-center gap-4 hover:border-brand-orange/30 transition-colors;
+}
+
+.matchAvatar {
+  @apply w-16 h-16 rounded-xl object-cover grayscale opacity-80;
+}
+
+.matchInfo {
+  @apply flex-1;
+}
+
+.matchNameRow {
+  @apply flex justify-between items-start mb-1;
+}
+
+.matchName {
+  @apply text-white font-bold text-lg;
+}
+
+.checkIcon {
+  @apply w-4 h-4 text-brand-orange;
+}
+
+.matchDetails {
+  @apply text-xs text-brand-white-muted mb-2;
+}
+
+.tagContainer {
+  @apply flex gap-2;
+}
+
+.tag {
+  @apply px-2 py-0.5 rounded text-[10px] font-bold bg-white/5 text-white/50 tracking-wider;
+}
+
+.emptyState {
+  @apply w-full border-2 border-dashed border-white/5 rounded-xl p-8 flex flex-col items-center justify-center text-center mt-6;
+}
+
+.emptyIcon {
+  @apply w-8 h-8 text-white/20 mb-3;
+}
+
+.emptyText {
+  @apply text-xs text-brand-white-muted/60 max-w-[200px];
+}
+
+.quoteFooter {
+  @apply mt-8 border border-white/5 bg-[#121212] rounded-xl p-6;
+}
+
+.quoteText {
+  @apply text-brand-white-muted text-sm italic text-center font-display;
+}

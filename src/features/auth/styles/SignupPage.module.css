@@ -1,0 +1,52 @@
+.pageContainer {
+  @apply min-h-screen bg-brand-black flex flex-col font-sans relative overflow-hidden;
+}
+
+.abstractGlow {
+  @apply absolute top-1/4 left-1/4 w-96 h-96 bg-brand-orange/5 rounded-full blur-[120px] pointer-events-none;
+}
+
+.watermarkContainer {
+  @apply fixed inset-0 flex items-center justify-center pointer-events-none overflow-hidden opacity-[0.03];
+}
+
+.watermarkLogo {
+  @apply w-[150vw] h-[150vw] md:w-[100vw] md:h-[100vw];
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.mainContent {
+  @apply flex-1 flex flex-col w-full relative z-10 pb-20 pt-10;
+}
+
+.stepIndicatorContainer {
+  @apply w-full max-w-4xl mx-auto mb-8 px-4;
+}
+
+.stepIndicatorHeader {
+  @apply flex items-center justify-between mb-3;
+}
+
+.stepIndicatorLabel {
+  @apply text-xs font-bold tracking-widest text-brand-orange uppercase;
+}
+
+.stepIndicatorTitle {
+  @apply text-sm font-bold text-brand-orange;
+}
+
+.stepIndicatorBarBg {
+  @apply h-1.5 w-full bg-white/5 rounded-full overflow-hidden;
+}
+
+.stepIndicatorBarFill {
+  @apply h-full bg-brand-orange;
+}
+
+.formContainer {
+  @apply w-full flex justify-center;
+}
