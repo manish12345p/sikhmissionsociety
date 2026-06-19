@@ -26,7 +26,7 @@ export const HeroSection = () => {
       </div>
 
       <div 
-        className="container relative z-10 mx-auto px-4 animate-fade-in-up"
+        className="container relative z-10 mx-auto px-4"
       >
         <div className="mx-auto max-w-4xl text-center">
           {/* H1 animation removed for LCP */}
@@ -54,11 +54,11 @@ export const HeroSection = () => {
 
         {/* Floating Glass Orbs */}
         <div className="pointer-events-none absolute -left-10 top-1/4 hidden lg:block animate-float-fast">
-          <div className="h-20 w-20 rounded-full bg-gradient-to-br from-brand-orange/40 to-transparent backdrop-blur-md shadow-[0_0_30px_rgba(255,102,0,0.3)] border border-white/20" />
+          <div className="h-20 w-20 rounded-full bg-gradient-to-br from-brand-orange/40 to-transparent shadow-[0_0_30px_rgba(255,102,0,0.3)] border border-white/20" />
         </div>
         
         <div className="pointer-events-none absolute -right-10 top-1/3 hidden lg:block animate-float animation-delay-2000">
-          <div className="h-28 w-28 rounded-full bg-gradient-to-tl from-[#cc5200]/40 to-transparent backdrop-blur-xl shadow-[0_0_40px_rgba(204,82,0,0.3)] border border-white/10" />
+          <div className="h-28 w-28 rounded-full bg-gradient-to-tl from-[#cc5200]/40 to-transparent shadow-[0_0_40px_rgba(204,82,0,0.3)] border border-white/10" />
         </div>
 
         {/* Stats row with hover tilt and glow */}
