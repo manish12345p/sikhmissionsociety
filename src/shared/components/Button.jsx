@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react';
+import Link from 'next/link';
 import { cn } from '@/core/utils';
 import { Loader2 } from 'lucide-react';
 
@@ -8,6 +9,7 @@ const Button = forwardRef(({
   size = 'default', 
   isLoading = false, 
   disabled,
+  href,
   children, 
   ...props 
 }, ref) => {
@@ -29,15 +31,28 @@ const Button = forwardRef(({
   };
 
   return (
-    <button
-      ref={ref}
-      disabled={disabled || isLoading}
-      className={cn(baseStyles, variants[variant], sizes[size], className)}
-      {...props}
-    >
-      {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-      {children}
-    </button>
+    <>
+      {href ? (
+        <Link 
+          href={href} 
+          className={cn(baseStyles, variants[variant], sizes[size], className)} 
+          {...props}
+        >
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {children}
+        </Link>
+      ) : (
+        <button
+          ref={ref}
+          disabled={disabled || isLoading}
+          className={cn(baseStyles, variants[variant], sizes[size], className)}
+          {...props}
+        >
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {children}
+        </button>
+      )}
+    </>
   );
 });
 
