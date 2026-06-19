@@ -13,7 +13,7 @@ export function CardHeader({ className, children, hover, ...props }) {
   return (
     <div 
       className={cn(
-        "relative rounded-2xl border border-white/10 bg-brand-black-card/95 p-6 md:backdrop-blur-xl transition-all duration-300",
+        "relative rounded-2xl border border-white/10 bg-brand-black-card/95 p-6 transition-all duration-300",
         hover && "hover:-translate-y-1 hover:border-brand-orange/50 hover:shadow-orange-glow",
         className
       )} 

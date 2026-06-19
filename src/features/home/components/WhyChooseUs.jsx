@@ -36,7 +36,7 @@ export const WhyChooseUs = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="group rounded-3xl bg-brand-black-card/80 backdrop-blur-xl p-8 border border-white/5 hover:border-brand-orange/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(255,102,0,0.15)] relative overflow-hidden"
+                className="group rounded-3xl bg-brand-black-card/95 p-8 border border-white/5 hover:border-brand-orange/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(255,102,0,0.15)] relative overflow-hidden"
               >
                 {/* Shimmer sweep effect on hover */}
                 <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/5 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />

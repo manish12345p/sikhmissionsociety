@@ -1,27 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+
 import { KhandaIcon } from '@/shared/components/SikhMissionSocietyLogo';
 import { Button } from '@/shared/components/Button';
 import { STATS } from '../models/homeConstants';
 import { HOME_STRINGS } from '@/core/strings';
 
-const containerVariants = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
-  },
-};
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
 
 export const HeroSection = () => {
   return (
@@ -40,11 +25,8 @@ export const HeroSection = () => {
         <KhandaIcon className="h-[700px] w-[700px] text-white" />
       </div>
 
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="container relative z-10 mx-auto px-4"
+      <div 
+        className="container relative z-10 mx-auto px-4 animate-fade-in-up"
       >
         <div className="mx-auto max-w-4xl text-center">
           {/* H1 animation removed for LCP */}
@@ -55,11 +37,11 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <motion.p variants={itemVariants} className="mx-auto mb-10 max-w-2xl text-lg text-brand-white-muted md:text-xl">
+          <p className="mx-auto mb-10 max-w-2xl text-lg text-brand-white-muted md:text-xl">
             {HOME_STRINGS.hero.description}
-          </motion.p>
+          </p>
 
-          <motion.div variants={itemVariants} className="flex flex-col items-center justify-center gap-4 sm:flex-row group">
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row group">
             <Button href="/signup" size="lg" className="relative overflow-hidden group-hover:-translate-y-1 h-14 px-8 text-lg font-semibold shadow-[0_4px_15px_rgba(255,102,0,0.2)] hover:shadow-[0_6px_20px_rgba(255,102,0,0.4)] transition-all duration-300">
               <span className="relative z-10">{HOME_STRINGS.hero.ctaPrimary}</span>
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.3)_50%,transparent_75%)] bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] animate-shimmer" />
@@ -67,7 +49,7 @@ export const HeroSection = () => {
             <Button href="/search" variant="outline" size="lg" className="h-14 px-8 text-lg font-semibold border-white/20 hover:border-brand-orange hover:bg-brand-orange/10 hover:shadow-orange-glow transition-all duration-300">
               {HOME_STRINGS.hero.ctaSecondary}
             </Button>
-          </motion.div>
+          </div>
         </div>
 
         {/* Floating Glass Orbs */}
@@ -80,8 +62,8 @@ export const HeroSection = () => {
         </div>
 
         {/* Stats row with hover tilt and glow */}
-        <motion.div variants={itemVariants} className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4 relative">
-          <div className="absolute inset-0 bg-brand-black-card/30 md:backdrop-blur-lg rounded-3xl border border-white/5 -m-6" />
+        <div className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4 relative">
+          <div className="absolute inset-0 bg-brand-black-card/30 backdrop-blur-lg rounded-3xl border border-white/5 -m-6" />
           {STATS.map((stat) => (
             <div key={stat.id} className="text-center relative z-10 group cursor-default transition-transform duration-300 hover:-translate-y-2 hover:scale-105">
               <div className="absolute inset-0 bg-brand-orange/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
@@ -89,8 +71,8 @@ export const HeroSection = () => {
               <p className="mt-2 text-sm font-medium tracking-wide uppercase text-brand-white-muted group-hover:text-white transition-colors">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 };
