@@ -34,7 +34,7 @@ export const FeaturedProfiles = () => {
               <div className="aspect-[4/5] overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
                 <Image
-                  src={profile.image?.src || profile.image}
+                  src={profile.image}
                   alt={profile.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
