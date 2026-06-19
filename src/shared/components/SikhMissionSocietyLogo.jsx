@@ -3,6 +3,7 @@
  * Uses the exact client-provided logo image — no modifications.
  */
 import React from 'react';
+import Image from 'next/image';
 import { cn } from '@/core/utils';
 import logoImage from '@/assets/images/logo.png';
 
@@ -21,12 +22,11 @@ export function SikhMissionSocietyLogo({ size = 'default', className, ...props }
   };
 
   return (
-    <img
-      src={logoImage?.src || logoImage}
+    <Image
+      src={logoImage}
       alt="Sikh Mission Society"
       className={cn(sizes[size], 'w-auto object-contain mix-blend-screen', className)}
-      fetchPriority="high"
-      loading="eager"
+      priority
       {...props}
     />
   );
@@ -42,12 +42,11 @@ export function SikhMissionSocietyLogo({ size = 'default', className, ...props }
  */
 export function KhandaIcon({ className = 'w-10 h-10', ...props }) {
   return (
-    <img
-      src={logoImage?.src || logoImage}
+    <Image
+      src={logoImage}
       alt="Sikh Mission Society"
       className={cn('object-contain mix-blend-screen', className)}
-      fetchPriority="high"
-      loading="eager"
+      priority
       {...props}
     />
   );
