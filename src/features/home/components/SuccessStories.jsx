@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import { SUCCESS_STORIES } from '../models/homeConstants';
@@ -34,10 +35,12 @@ export const SuccessStories = () => {
               <Quote className="absolute right-6 top-6 h-12 w-12 text-brand-orange/10" />
               <div className="mb-6 flex items-center gap-4">
                 <div className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-brand-orange shadow-[0_0_15px_rgba(255,102,0,0.3)]">
-                  <img
+                  <Image
                     src={story.image?.src || story.image}
                     alt={story.names}
-                    className="h-full w-full object-cover"
+                    fill
+                    sizes="64px"
+                    className="object-cover"
                   />
                 </div>
                 <div>
