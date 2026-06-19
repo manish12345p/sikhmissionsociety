@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search } from 'lucide-react';
-import { motion } from 'framer-motion';
+
 import { Button } from '@/shared/components/Button';
 import { Select } from '@/shared/components/Select';
 import { HOME_STRINGS } from '@/core/strings';
@@ -9,11 +9,7 @@ export const SearchSection = () => {
   return (
     <section className="relative -mt-16 z-20 px-4">
       <div className="container mx-auto max-w-5xl">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div 
           className="rounded-2xl bg-brand-black-card/80 p-6 md:p-8 shadow-2xl backdrop-blur-xl border border-white/10 relative overflow-hidden"
         >
           {/* Subtle glow border effect */}
@@ -75,7 +71,7 @@ export const SearchSection = () => {
               </Button>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

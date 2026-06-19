@@ -7,7 +7,7 @@ import { STATS } from '../models/homeConstants';
 import { HOME_STRINGS } from '@/core/strings';
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: { staggerChildren: 0.1, delayChildren: 0.2 },
