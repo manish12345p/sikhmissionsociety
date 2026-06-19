@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { ShieldCheck, Lock, Users, Globe, HeadphonesIcon, Heart } from 'lucide-react';
 import { FEATURES } from '../models/homeConstants';
 import { HOME_STRINGS } from '@/core/strings';
@@ -16,26 +16,19 @@ export const WhyChooseUs = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange-dark/10 rounded-full blur-[60px] md:blur-[100px] pointer-events-none md:animate-blob animation-delay-2000" />
       
       <div className="container relative mx-auto px-4 z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div 
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">{HOME_STRINGS.whyChooseUs.title}</h2>
           <p className="mx-auto max-w-2xl text-brand-white-muted text-lg">{HOME_STRINGS.whyChooseUs.subtitle}</p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((feature, i) => {
             const IconComponent = iconMap[feature.icon];
             return (
-              <motion.div
+              <div
                 key={feature.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
                 className="group rounded-3xl bg-brand-black-card/95 p-8 border border-white/5 hover:border-brand-orange/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(255,102,0,0.15)] relative overflow-hidden"
               >
                 {/* Shimmer sweep effect on hover */}
@@ -50,7 +43,7 @@ export const WhyChooseUs = () => {
                 </div>
                 <h3 className="mb-3 text-2xl font-bold text-white group-hover:text-brand-orange transition-colors">{feature.title}</h3>
                 <p className="text-brand-white-muted leading-relaxed group-hover:text-white/90 transition-colors">{feature.description}</p>
-              </motion.div>
+              </div>
             );
           })}
         </div>
