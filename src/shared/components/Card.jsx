@@ -9,9 +9,16 @@ export function Card({ className, children, ...props }) {
   );
 }
 
-export function CardHeader({ className, children, ...props }) {
+export function CardHeader({ className, children, hover, ...props }) {
   return (
-    <div className={cn("px-6 py-5 border-b border-brand-black-border", className)} {...props}>
+    <div 
+      className={cn(
+        "relative rounded-2xl border border-white/10 bg-brand-black-card/95 p-6 md:backdrop-blur-xl transition-all duration-300",
+        hover && "hover:-translate-y-1 hover:border-brand-orange/50 hover:shadow-orange-glow",
+        className
+      )} 
+      {...props}
+    >
       {children}
     </div>
   );

@@ -10,7 +10,7 @@ export const SearchSection = () => {
     <section className="relative -mt-16 z-20 px-4">
       <div className="container mx-auto max-w-5xl">
         <div 
-          className="rounded-2xl bg-brand-black-card/80 p-6 md:p-8 shadow-2xl backdrop-blur-xl border border-white/10 relative overflow-hidden"
+          className="rounded-2xl bg-brand-black-card/95 p-6 md:p-8 shadow-2xl md:backdrop-blur-xl border border-white/10 relative overflow-hidden"
         >
           {/* Subtle glow border effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-brand-orange/20 to-transparent opacity-50" />

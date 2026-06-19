@@ -81,7 +81,7 @@ export const HeroSection = () => {
 
         {/* Stats row with hover tilt and glow */}
         <motion.div variants={itemVariants} className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4 relative">
-          <div className="absolute inset-0 bg-brand-black-card/30 backdrop-blur-lg rounded-3xl border border-white/5 -m-6" />
+          <div className="absolute inset-0 bg-brand-black-card/30 md:backdrop-blur-lg rounded-3xl border border-white/5 -m-6" />
           {STATS.map((stat) => (
             <div key={stat.id} className="text-center relative z-10 group cursor-default transition-transform duration-300 hover:-translate-y-2 hover:scale-105">
               <div className="absolute inset-0 bg-brand-orange/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
