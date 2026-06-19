@@ -4,16 +4,19 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/features/auth/contexts/AuthContext';
 
+import GlobalLoader from '@/shared/components/GlobalLoader';
+
 export function ProtectedRoute({ children }) {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (!user) {
+    if (!loading && !user) {
       router.replace('/');
     }
-  }, [user, router]);
+  }, [user, loading, router]);
 
+  if (loading) return <GlobalLoader />;
   if (!user) return null;
 
   return <>{children}</>;

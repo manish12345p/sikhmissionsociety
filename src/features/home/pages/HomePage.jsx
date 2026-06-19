@@ -15,20 +15,6 @@ import { CtaSection } from "../components/CtaSection";
  * components. This file only orchestrates their layout order.
  */
 const HomePage = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Artificial delay to show the loader on home page
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return <GlobalLoader />;
-  }
-
   return (
     <main>
       <HeroSection />
