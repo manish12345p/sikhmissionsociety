@@ -16,9 +16,9 @@ const Button = forwardRef(({
   const baseStyles = 'inline-flex items-center justify-center font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-black disabled:opacity-40 disabled:pointer-events-none tracking-wide';
 
   const variants = {
-    primary: 'bg-[#D35400] text-white hover:bg-brand-orange focus-visible:ring-brand-orange shadow-orange-glow-sm hover:shadow-orange-glow rounded-xl',
+    primary: 'bg-brand-orange text-[#0a0a0a] hover:bg-[#ff8533] focus-visible:ring-brand-orange shadow-orange-glow-sm hover:shadow-orange-glow rounded-xl',
     secondary: 'bg-brand-black-card text-brand-white hover:bg-brand-black-border focus-visible:ring-brand-orange border border-brand-black-border rounded-xl',
-    outline: 'border border-brand-orange text-brand-orange bg-transparent hover:bg-brand-orange hover:text-white focus-visible:ring-brand-orange rounded-xl',
+    outline: 'border border-brand-orange text-brand-orange bg-transparent hover:bg-brand-orange hover:text-[#0a0a0a] focus-visible:ring-brand-orange rounded-xl',
     ghost: 'bg-transparent hover:bg-brand-black-card text-brand-white-muted hover:text-brand-white focus-visible:ring-brand-orange rounded-xl',
     link: 'underline-offset-4 hover:underline text-brand-orange focus-visible:ring-brand-orange',
   };
