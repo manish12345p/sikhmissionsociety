@@ -33,15 +33,12 @@ export const HeroSection = () => {
         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-brand-orange-light/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000" />
       </div>
 
-      {/* Fixed Khanda Watermark */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 0.03, scale: 1 }}
-        transition={{ duration: 2, ease: "easeOut" }}
-        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center"
+      {/* Fixed Khanda Watermark (Animation removed for LCP) */}
+      <div 
+        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-[0.03]"
       >
         <KhandaIcon className="h-[700px] w-[700px] text-white" />
-      </motion.div>
+      </div>
 
       <motion.div 
         variants={containerVariants}
@@ -50,12 +47,13 @@ export const HeroSection = () => {
         className="container relative z-10 mx-auto px-4"
       >
         <div className="mx-auto max-w-4xl text-center">
-          <motion.h1 variants={itemVariants} className="mb-6 text-5xl font-black font-display leading-tight text-white md:text-6xl lg:text-7xl">
+          {/* H1 animation removed for LCP */}
+          <h1 className="mb-6 text-5xl font-black font-display leading-tight text-white md:text-6xl lg:text-7xl">
             {HOME_STRINGS.hero.headlinePrefix}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-[#ffcc00] to-[#cc5200] animate-gradient-x">
               {HOME_STRINGS.hero.headlineHighlight}
             </span>
-          </motion.h1>
+          </h1>
 
           <motion.p variants={itemVariants} className="mx-auto mb-10 max-w-2xl text-lg text-brand-white-muted md:text-xl">
             {HOME_STRINGS.hero.description}
