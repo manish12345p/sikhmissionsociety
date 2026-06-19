@@ -45,6 +45,7 @@ export const SearchSection = () => {
               <span className="pb-3 text-brand-white-muted font-medium">{HOME_STRINGS.search.to}</span>
               <div className="w-full">
                 <Select
+                  aria-label="To Age"
                   options={Array.from({ length: 42 }, (_, i) => ({
                     value: String(i + 18),
                     label: String(i + 18),

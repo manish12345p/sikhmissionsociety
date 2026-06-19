@@ -132,7 +132,7 @@ export function MainLayout({ children }) {
           </div>
 
           <div>
-            <h4 className="font-bold text-brand-white mb-5 text-sm uppercase tracking-widest">Platform</h4>
+            <h3 className="font-bold text-brand-white mb-5 text-sm uppercase tracking-widest">Platform</h3>
             <ul className="space-y-3 text-sm text-brand-white-muted">
               {['Find a Match', 'Success Stories', 'Premium Plans', 'How it Works'].map(l => (
                 <li key={l}><a href="#" className="hover:text-brand-orange transition-colors">{l}</a></li>
@@ -141,7 +141,7 @@ export function MainLayout({ children }) {
           </div>
 
           <div>
-            <h4 className="font-bold text-brand-white mb-5 text-sm uppercase tracking-widest">Legal</h4>
+            <h3 className="font-bold text-brand-white mb-5 text-sm uppercase tracking-widest">Legal</h3>
             <ul className="space-y-3 text-sm text-brand-white-muted">
               {['Privacy Policy', 'Terms of Service', 'Safety Tips', 'Contact Us'].map(l => (
                 <li key={l}><a href="#" className="hover:text-brand-orange transition-colors">{l}</a></li>
