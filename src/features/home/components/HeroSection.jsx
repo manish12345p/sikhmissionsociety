@@ -28,14 +28,14 @@ export const HeroSection = () => {
     <section className="relative overflow-hidden bg-brand-black py-20 lg:py-32 perspective-1000">
       {/* Animated Blob Backgrounds */}
       <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
-        <div className="absolute top-0 -left-4 w-72 h-72 bg-brand-orange/20 rounded-full filter blur-[60px] md:mix-blend-multiply md:blur-[100px] md:animate-blob" />
-        <div className="absolute top-0 -right-4 w-72 h-72 bg-[#cc5200]/20 rounded-full filter blur-[60px] md:mix-blend-multiply md:blur-[100px] md:animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-brand-orange-light/20 rounded-full filter blur-[60px] md:mix-blend-multiply md:blur-[100px] md:animate-blob animation-delay-4000" />
+        <div className="hidden md:block absolute top-0 -left-4 w-72 h-72 bg-brand-orange/20 rounded-full filter mix-blend-multiply blur-[100px] animate-blob" />
+        <div className="hidden md:block absolute top-0 -right-4 w-72 h-72 bg-[#cc5200]/20 rounded-full filter mix-blend-multiply blur-[100px] animate-blob animation-delay-2000" />
+        <div className="hidden md:block absolute -bottom-8 left-20 w-72 h-72 bg-brand-orange-light/20 rounded-full filter mix-blend-multiply blur-[100px] animate-blob animation-delay-4000" />
       </div>
 
       {/* Fixed Khanda Watermark (Animation removed for LCP) */}
       <div 
-        className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-[0.03]"
+        className="hidden md:flex pointer-events-none absolute inset-0 z-0 items-center justify-center opacity-[0.03]"
       >
         <KhandaIcon className="h-[700px] w-[700px] text-white" />
       </div>

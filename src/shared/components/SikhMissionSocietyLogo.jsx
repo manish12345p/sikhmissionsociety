@@ -46,7 +46,6 @@ export function KhandaIcon({ className = 'w-10 h-10', ...props }) {
       src={logoImage}
       alt="Sikh Mission Society"
       className={cn('object-contain mix-blend-screen', className)}
-      priority
       {...props}
     />
   );
