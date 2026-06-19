@@ -22,7 +22,7 @@ export function SikhMissionSocietyLogo({ size = 'default', className, ...props }
 
   return (
     <img
-      src={logoImage}
+      src={logoImage?.src || logoImage}
       alt="Sikh Mission Society"
       className={cn(sizes[size], 'w-auto object-contain mix-blend-screen', className)}
       {...props}
@@ -41,7 +41,7 @@ export function SikhMissionSocietyLogo({ size = 'default', className, ...props }
 export function KhandaIcon({ className = 'w-10 h-10', ...props }) {
   return (
     <img
-      src={logoImage}
+      src={logoImage?.src || logoImage}
       alt="Sikh Mission Society"
       className={cn('object-contain mix-blend-screen', className)}
       {...props}

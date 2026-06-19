@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { KhandaIcon } from '@/shared/components/SikhMissionSocietyLogo';
 import { Button } from '@/shared/components/Button';
@@ -62,13 +62,13 @@ export const HeroSection = () => {
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col items-center justify-center gap-4 sm:flex-row group">
-            <Link to="/signup">
+            <Link href="/signup">
               <Button size="lg" className="relative overflow-hidden group-hover:-translate-y-1 h-14 px-8 text-lg font-semibold shadow-[0_4px_15px_rgba(255,102,0,0.2)] hover:shadow-[0_6px_20px_rgba(255,102,0,0.4)] transition-all duration-300">
                 <span className="relative z-10">{HOME_STRINGS.hero.ctaPrimary}</span>
                 <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.3)_50%,transparent_75%)] bg-[length:250%_250%,100%_100%] bg-[position:-100%_0,0_0] animate-shimmer" />
               </Button>
             </Link>
-            <Link to="/search">
+            <Link href="/search">
               <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-semibold border-white/20 hover:border-brand-orange hover:bg-brand-orange/10 hover:shadow-orange-glow transition-all duration-300">
                 {HOME_STRINGS.hero.ctaSecondary}
               </Button>

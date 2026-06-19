@@ -1,24 +1,25 @@
+"use client";
+
 import React from 'react';
-import { AppRouter } from '@/core/routes/AppRouter';
 import { AuthProvider, useAuth } from '@/features/auth/contexts/AuthContext';
 import GlobalLoader from '@/shared/components/GlobalLoader';
 
-function AppContent() {
+function AppContent({ children }) {
   const { loading } = useAuth();
   
   if (loading) {
     return <GlobalLoader />;
   }
   
-  return <AppRouter />;
+  return <>{children}</>;
 }
 
-function App() {
+export default function AppWrapper({ children }) {
   return (
     <AuthProvider>
-      <AppContent />
+      <AppContent>
+        {children}
+      </AppContent>
     </AuthProvider>
   );
 }
-
-export default App;

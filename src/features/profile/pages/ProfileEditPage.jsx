@@ -1,6 +1,6 @@
 import React from 'react';
 import { Edit3, Save, X, ArrowLeft } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/shared/components/Button';
 import GlobalLoader from '@/shared/components/GlobalLoader';
 
@@ -28,7 +28,7 @@ const SECTION_COMPONENTS = {
  * sidebar, and whichever section tab is active.
  */
 export default function ProfileEditPage() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const { activeTab, isEditing, isSaving, toggleEdit, saveChanges, switchTab } =
     useProfileEdit();
 
@@ -60,7 +60,7 @@ export default function ProfileEditPage() {
       {/* Back to Dashboard Navigation */}
       <div>
         <button 
-          onClick={() => navigate('/dashboard')}
+          onClick={() => router.push('/dashboard')}
           className="inline-flex items-center gap-2 text-sm text-brand-white-muted hover:text-brand-orange transition-colors font-medium"
         >
           <ArrowLeft className="w-4 h-4" />

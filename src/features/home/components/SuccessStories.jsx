@@ -35,7 +35,7 @@ export const SuccessStories = () => {
               <div className="mb-6 flex items-center gap-4">
                 <div className="relative h-16 w-16 overflow-hidden rounded-full border-2 border-brand-orange shadow-[0_0_15px_rgba(255,102,0,0.3)]">
                   <img
-                    src={story.image}
+                    src={story.image?.src || story.image}
                     alt={story.names}
                     className="h-full w-full object-cover"
                   />

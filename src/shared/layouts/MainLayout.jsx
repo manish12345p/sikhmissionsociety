@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/shared/components/Button';
 import { SikhMissionSocietyLogo } from '@/shared/components/SikhMissionSocietyLogo';
 import { cn } from '@/core/utils';
 
 const navLinks = [
-  { label: 'Home', to: '/' },
-  { label: 'Find Match', to: '/search' },
-  { label: 'Success Stories', to: '/stories' },
-  { label: 'About', to: '/about' },
+  { label: 'Home', href: '/' },
+  { label: 'Find Match', href: '/search' },
+  { label: 'Success Stories', href: '/stories' },
+  { label: 'About', href: '/about' },
 ];
 
-export function MainLayout() {
+export function MainLayout({ children }) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   return (
     <div className="min-h-screen flex flex-col bg-brand-black">
@@ -29,7 +30,7 @@ export function MainLayout() {
         <div className="container-custom h-20 flex items-center justify-between">
           
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0">
             <SikhMissionSocietyLogo size="default" />
           </Link>
 
@@ -37,11 +38,11 @@ export function MainLayout() {
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
-                key={link.to}
-                to={link.to}
+                key={link.href}
+                href={link.href}
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
-                  pathname === link.to
+                  pathname === link.href
                     ? "text-brand-orange bg-brand-orange/10"
                     : "text-brand-white-muted hover:text-brand-white hover:bg-brand-black-card"
                 )}
@@ -54,12 +55,12 @@ export function MainLayout() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Link
-              to="/login"
+              href="/login"
               className="text-sm font-medium text-brand-white-muted hover:text-brand-white transition-colors px-4 py-2"
             >
               Log in
             </Link>
-            <Link to="/signup">
+            <Link href="/signup">
               <Button size="sm" className="px-6">
                 Join Free
               </Button>
@@ -80,12 +81,12 @@ export function MainLayout() {
           <div className="md:hidden border-t border-brand-black-border bg-brand-black-soft px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <Link
-                key={link.to}
-                to={link.to}
+                key={link.href}
+                href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
                   "block px-4 py-3 rounded-xl text-sm font-medium transition-colors",
-                  pathname === link.to
+                  pathname === link.href
                     ? "text-brand-orange bg-brand-orange/10"
                     : "text-brand-white-muted hover:text-brand-white hover:bg-brand-black-card"
                 )}
@@ -94,10 +95,10 @@ export function MainLayout() {
               </Link>
             ))}
             <div className="pt-3 flex gap-3">
-              <Link to="/login" className="flex-1">
+              <Link href="/login" className="flex-1">
                 <Button variant="secondary" className="w-full">Log in</Button>
               </Link>
-              <Link to="/signup" className="flex-1">
+              <Link href="/signup" className="flex-1">
                 <Button className="w-full">Join Free</Button>
               </Link>
             </div>
@@ -107,7 +108,7 @@ export function MainLayout() {
 
       {/* ──── MAIN ──── */}
       <main className="flex-1 flex flex-col">
-        <Outlet />
+        {children}
       </main>
 
       {/* ──── FOOTER ──── */}

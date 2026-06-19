@@ -1,13 +1,20 @@
-import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
+"use client";
+
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/features/auth/contexts/AuthContext';
 
 export function ProtectedRoute({ children }) {
   const { user } = useAuth();
+  const router = useRouter();
 
-  if (!user) {
-    return <Navigate to="/" replace />;
-  }
+  useEffect(() => {
+    if (!user) {
+      router.replace('/');
+    }
+  }, [user, router]);
 
-  return children ? children : <Outlet />;
+  if (!user) return null;
+
+  return <>{children}</>;
 }

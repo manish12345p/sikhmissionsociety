@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { signupSchema, STEP_FIELDS } from '../validations/signupSchema';
 import { registerUser } from '../services/authService';
@@ -8,7 +8,7 @@ import { registerUser } from '../services/authService';
 export function useSignup() {
   const [step, setStep] = useState(1);
   const [serverError, setServerError] = useState('');
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const { register, handleSubmit, formState: { errors, isSubmitting }, trigger, watch, setValue } = useForm({
     resolver: zodResolver(signupSchema),
@@ -24,7 +24,7 @@ export function useSignup() {
       console.log('Submitting data:', data);
       await registerUser(data);
       console.log('Registered user successfully, navigating...');
-      navigate('/dashboard');
+      router.push('/dashboard');
     } catch (error) {
       console.error('Registration failed:', error);
       if (error.code === 'auth/email-already-in-use') {

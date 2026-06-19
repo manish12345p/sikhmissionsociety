@@ -136,7 +136,7 @@ export const PartnerPreferencesStep = ({ register, errors, isSubmitting, getProg
         <div className={styles.matchList}>
           {/* Mock Profile Card 1 */}
           <div className={styles.matchCard}>
-            <img src={woman1} alt="Amandeep" className={styles.matchAvatar} />
+            <img src={woman1?.src || woman1} alt="Amandeep" className={styles.matchAvatar} />
             <div className={styles.matchInfo}>
               <div className={styles.matchNameRow}>
                 <h4 className={styles.matchName}>Amandeep Kaur</h4>
@@ -152,7 +152,7 @@ export const PartnerPreferencesStep = ({ register, errors, isSubmitting, getProg
 
           {/* Mock Profile Card 2 */}
           <div className={styles.matchCard}>
-            <img src={woman2} alt="Jaspreet" className={styles.matchAvatar} />
+            <img src={woman2?.src || woman2} alt="Jaspreet" className={styles.matchAvatar} />
             <div className={styles.matchInfo}>
               <div className={styles.matchNameRow}>
                 <h4 className={styles.matchName}>Jaspreet B.</h4>

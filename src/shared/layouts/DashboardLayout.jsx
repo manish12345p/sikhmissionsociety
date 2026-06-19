@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Outlet, Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
 import { Menu, X, User, Settings, LogOut, ChevronDown } from 'lucide-react';
 import { SikhMissionSocietyLogo, KhandaIcon } from '@/shared/components/SikhMissionSocietyLogo';
 import { cn } from '@/core/utils';
 import { useAuth } from '@/features/auth/contexts/AuthContext';
 
-export function DashboardLayout() {
+export function DashboardLayout({ children }) {
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
   const { user } = useAuth();
@@ -32,7 +32,7 @@ export function DashboardLayout() {
           
           <div className="flex items-center gap-4">
             {/* Logo */}
-            <Link to="/dashboard" className="flex-shrink-0">
+            <Link href="/dashboard" className="flex-shrink-0">
               <SikhMissionSocietyLogo size="sm" />
             </Link>
           </div>
@@ -60,7 +60,7 @@ export function DashboardLayout() {
                   
                   <div className="py-1">
                     <Link 
-                      to="/dashboard/profile" 
+                      href="/dashboard/profile" 
                       onClick={() => setProfileDropdownOpen(false)}
                       className="flex items-center gap-2 px-4 py-2 text-sm text-brand-white-muted hover:bg-brand-black-card hover:text-brand-white transition-colors"
                     >
@@ -68,7 +68,7 @@ export function DashboardLayout() {
                       Edit Profile
                     </Link>
                     <Link 
-                      to="/dashboard" 
+                      href="/dashboard" 
                       onClick={() => setProfileDropdownOpen(false)}
                       className="flex items-center gap-2 px-4 py-2 text-sm text-brand-white-muted hover:bg-brand-black-card hover:text-brand-white transition-colors"
                     >
@@ -100,7 +100,7 @@ export function DashboardLayout() {
 
       {/* ──── MAIN CONTENT ──── */}
       <main className="flex-1 overflow-auto">
-        <Outlet />
+        {children}
       </main>
       
     </div>

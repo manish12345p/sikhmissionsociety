@@ -33,7 +33,7 @@ export const FeaturedProfiles = () => {
               <div className="aspect-[4/5] overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
                 <img
-                  src={profile.image}
+                  src={profile.image?.src || profile.image}
                   alt={profile.name}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

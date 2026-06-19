@@ -1,10 +1,9 @@
 import React from 'react';
 import { useRive } from '@rive-app/react-canvas';
-import animationFile from '../../assets/animation/26908-50574-cloner-scripted-path-effect.riv';
 
 export default function GlobalLoader() {
   const { RiveComponent } = useRive({
-    src: animationFile,
+    src: '/26908-50574-cloner-scripted-path-effect.riv',
     autoplay: true,
     // Add stateMachines: "State Machine Name" if there is a specific one you want to run.
   });
