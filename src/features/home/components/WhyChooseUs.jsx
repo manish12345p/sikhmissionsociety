@@ -12,8 +12,8 @@ export const WhyChooseUs = () => {
   return (
     <section className="bg-brand-black-soft py-24 relative overflow-hidden">
       {/* Decorative blurred blob */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-[100px] pointer-events-none animate-blob" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange-dark/10 rounded-full blur-[100px] pointer-events-none animate-blob animation-delay-2000" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-orange/10 rounded-full blur-[60px] md:blur-[100px] pointer-events-none md:animate-blob" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-orange-dark/10 rounded-full blur-[60px] md:blur-[100px] pointer-events-none md:animate-blob animation-delay-2000" />
       
       <div className="container relative mx-auto px-4 z-10">
         <motion.div 
