@@ -21,9 +21,7 @@ export function MainLayout({ children }) {
     <div className="min-h-screen flex flex-col bg-brand-black">
       
       {/* ──── HEADER ──── */}
-      <header className="sticky top-0 z-50 border-b border-brand-black-border"
-        style={{ background: 'rgba(10,10,10,0.95)', backdropFilter: 'blur(20px)' }}
-      >
+      <header className="sticky top-0 z-50 border-b border-brand-black-border bg-[#0a0a0a]/95 md:backdrop-blur-xl">
         {/* Orange top accent line */}
         <div className="h-0.5 w-full bg-brand-gradient" />
 
@@ -60,11 +58,9 @@ export function MainLayout({ children }) {
             >
               Log in
             </Link>
-            <Link href="/signup">
-              <Button size="sm" className="px-6">
-                Join Free
-              </Button>
-            </Link>
+            <Button href="/signup" size="sm" className="px-6">
+              Join Free
+            </Button>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -95,12 +91,12 @@ export function MainLayout({ children }) {
               </Link>
             ))}
             <div className="pt-3 flex gap-3">
-              <Link href="/login" className="flex-1">
-                <Button variant="secondary" className="w-full">Log in</Button>
-              </Link>
-              <Link href="/signup" className="flex-1">
-                <Button className="w-full">Join Free</Button>
-              </Link>
+              <Button href="/login" variant="secondary" className="flex-1 w-full">
+                Log in
+              </Button>
+              <Button href="/signup" className="flex-1 w-full">
+                Join Free
+              </Button>
             </div>
           </div>
         )}

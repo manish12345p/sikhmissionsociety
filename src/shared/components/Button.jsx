@@ -34,6 +34,7 @@ const Button = forwardRef(({
     <>
       {href ? (
         <Link 
+          ref={ref}
           href={href} 
           className={cn(baseStyles, variants[variant], sizes[size], className)} 
           {...props}
