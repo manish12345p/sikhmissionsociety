@@ -9,11 +9,11 @@ import couple1 from '@/assets/images/stories/couple-1.png';
 import couple2 from '@/assets/images/stories/couple-2.png';
 import couple3 from '@/assets/images/stories/couple-3.png';
 
-import woman1 from '@/assets/images/profiles/woman-1.png';
+import woman1 from '@/assets/images/profiles/woman-1-new.jpg';
 import man1 from '@/assets/images/profiles/man-1.png';
-import woman2 from '@/assets/images/profiles/woman-2.png';
+import woman2 from '@/assets/images/profiles/woman-2-new.png';
 import man2 from '@/assets/images/profiles/man-2.png';
-import woman3 from '@/assets/images/profiles/woman-3.png';
+import woman3 from '@/assets/images/profiles/woman-3-new.jpg';
 import man3 from '@/assets/images/profiles/man-3.png';
 
 // ─── Hero Stats Row ────────────────────────────────────────────
